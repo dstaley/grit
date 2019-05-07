@@ -99,7 +99,7 @@ DEPENDS		:=	$(GRIT_OBJ:.o=.d) $(LIBCLDIB_OBJ:.o=.d) $(LIBGRIT_OBJ:.o=.d)
 
 SRCDIRS	:= $(CLDIB_DIR) $(LIBGRIT_DIR) $(GRIT_DIR) $(EXTLIB_DIR)
 INCDIRS	:= $(CLDIB_DIR) $(LIBGRIT_DIR) $(EXTLIB_DIR)
-LIBDIRS	:= . /usr/local/lib
+LIBDIRS	:= . /usr/local/lib /usr/lib
 
 INCLUDE		:= $(foreach dir, $(INCDIRS), -I$(dir))
 LIBPATHS	:= $(foreach dir, $(LIBDIRS), -L$(dir))
