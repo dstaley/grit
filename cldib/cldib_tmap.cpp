@@ -23,7 +23,7 @@
 int dib_get_pbank(CLDIB *dib);
 bool dib_set_pbank(CLDIB *dib, int pbank);
 bool dib_tilecmp(CLDIB *dib, CLDIB *tileset, int tid, u32 mask);
-Mapsel dib_find(CLDIB *dib, CLDIB *tileset, int tileN, u32 flags);
+Mapsel dib_find(CLDIB *dib, CLDIB *tileset, u32 tileN, u32 flags);
 
 /*!	\}	*/
 
@@ -603,7 +603,7 @@ bool dib_tilecmp(CLDIB *dib, CLDIB *tileset, int tid, u32 dwMask)
 	  size and bitdepth of the tiles. If you want flipped tiled, 
 	  flip \a dib outside.
 */
-Mapsel dib_find(CLDIB *dib, CLDIB *tileset, int tileN, u32 flags)
+Mapsel dib_find(CLDIB *dib, CLDIB *tileset, u32 tileN, u32 flags)
 {
 	int i;
 	int dibB= dib_get_bpp(dib);
